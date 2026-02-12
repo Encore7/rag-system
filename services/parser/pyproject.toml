@@ -1,0 +1,19 @@
+[project]
+name = "paperpipe-ingest-parser"
+version = "0.1.0"
+requires-python = ">=3.11"
+dependencies = [
+    "boto3>=1.34",                 # MinIO/S3
+    "requests>=2.31",              # arXiv + PDF download
+    "docling>=2.73.0",
+    "fastapi>=0.128.8",
+    "prometheus-client>=0.24.1",
+    "psycopg[binary]>=3.3.2",
+    "python-dotenv>=1.2.1",
+    "uvicorn>=0.40.0",
+    "paperpipe-common @ file:../../libs/common"
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
